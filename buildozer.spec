@@ -399,13 +399,13 @@ ios.codesign.allowed = false
 #ios.manifest.full_size_image_url =
 
 
-[buildozer]
+#[buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+#log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
-warn_on_root = 1
+#warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
 # build_dir = ./.buildozer
