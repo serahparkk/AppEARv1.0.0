@@ -1,0 +1,141 @@
+MDScreen:
+    name: "signup"
+
+    MDFloatLayout:
+        md_bg_color : [147/255,182/255,124/255,1]
+
+        MDLabel :
+            text : 'AppEAR'
+            bold : True
+            color : [35/255,31/255,32/255,1]
+            font_size : 25
+            pos_hint : {"center_x" : .6, "center_y" : .8}
+            halign : "left"
+
+        MDLabel :
+            text : 'Hi! Welcome.'
+            color : [35/255,31/255,32/255,1]
+            font_size : 50
+            bold: True
+            halign : "left"
+            pos_hint : {"center_x" : .6, "center_y" : .75}
+
+        MDLabel :
+            text : 'Let us create an account'
+            color : [233/255,255/255,251/255,1]
+            font_size : 16
+            bold: True
+            halign : "left"
+            pos_hint : {"center_x" : .6, "center_y" : .70}
+
+        MDFloatLayout:
+            size_hint : .7, .07
+            pos_hint : {"center_x" : .5, "center_y" : .60}
+            TextInput :
+                hint_text : "Email or Phone Number"
+                size_hint_y : .70
+                pos_hint : {"center_x" : .5, "center_y" : .65}
+                background_color: (0,0,0,0)
+                hint_text_color : [101/255, 131/255, 84/255, 1]
+                foreground_color: [233/255,255/255,251/255,1]
+                cursor_color : [101/255, 131/255, 84/255, 1]
+                font_size : 16
+                cursor_width: 2
+                multiline: "False"
+            MDFloatLayout:
+                size_hint_y : .03
+                pos_hint : {"center_x" : .48, "center_y" : .25}
+                md_bg_color : [101/255, 131/255, 84/255, 1]
+
+        MDFloatLayout:
+            size_hint : .7, .07
+            pos_hint : {"center_x" : .5, "center_y" : .50}
+            TextInput :
+                hint_text : "Username"
+                size_hint_y : .70
+                pos_hint : {"center_x" : .5, "center_y" : .65}
+                background_color: (0,0,0,0)
+                hint_text_color : [101/255, 131/255, 84/255, 1]
+                foreground_color: [233/255,255/255,251/255,1]
+                cursor_color : [101/255, 131/255, 84/255, 1]
+                font_size : 16
+                cursor_width: 2
+                multiline: "False"
+            MDFloatLayout:
+                size_hint_y : .03
+                pos_hint : {"center_x" : .48, "center_y" : .25}
+                md_bg_color : [101/255, 131/255, 84/255, 1]
+
+        MDFloatLayout:
+            size_hint : .7, .07
+            pos_hint : {"center_x" : .5, "center_y" : .40}
+            TextInput :
+                hint_text : "Password"
+                size_hint_y : .70
+                pos_hint : {"center_x" : .5, "center_y" : .65}
+                background_color: (0,0,0,0)
+                hint_text_color : [101/255, 131/255, 84/255, 1]
+                foreground_color: [233/255,255/255,251/255,1]
+                cursor_color : [101/255, 131/255, 84/255, 1]
+                font_size : 16
+                cursor_width: 2
+                multiline: "False"
+                password: True
+            MDFloatLayout:
+                size_hint_y : .03
+                pos_hint : {"center_x" : .48, "center_y" : .25}
+                md_bg_color : [101/255, 131/255, 84/255, 1]
+
+        MDLabel :
+            text : 'Must be at least 6 characters and contains at least a number'
+            color : [101/255, 131/255, 84/255, 1]
+            font_size : 10
+            bold: True
+            halign : "left"
+            pos_hint : {"center_x" : .65, "center_y" : .37}
+
+        MDFloatLayout:
+            size_hint : .7, .07
+            pos_hint : {"center_x" : .5, "center_y" : .27}
+            TextInput :
+                hint_text : "Confirm Password"
+                size_hint_y : .70
+                pos_hint : {"center_x" : .5, "center_y" : .65}
+                background_color: (0,0,0,0)
+                hint_text_color : [101/255, 131/255, 84/255, 1]
+                foreground_color: [233/255,255/255,251/255,1]
+                cursor_color : [101/255, 131/255, 84/255, 1]
+                font_size : 16
+                cursor_width: 2
+                multiline: "False"
+                password: True
+            MDFloatLayout:
+                size_hint_y : .03
+                pos_hint : {"center_x" : .48, "center_y" : .25}
+                md_bg_color : [101/255, 131/255, 84/255, 1]
+
+        Button:
+            text: "Signup"
+            size_hint: .66, .065
+            pos_hint : {"center_x":.5 , "center_y": .17}
+            on_press: root.manager.current = "signupsuccess"
+            canvas.before:
+                RoundedRectangle:
+                    size : self.size
+                    pos : self.pos
+                    radius : [5]
+
+        MDLabel :
+            text: "Have an account?"
+            bold: True
+            pos_hint : {"center_x":.7 , "center_y": .12}
+            font_size : 18
+            color : [35/255,31/255,32/255,1]
+
+        MDTextButton :
+            text: "Login"
+            bold: True
+            pos_hint : {"center_x":.68 , "center_y": .12}
+            font_size : 18
+            color: [233/255,255/255,251/255,1]
+            on_press: root.manager.current = "login"
